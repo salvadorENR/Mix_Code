@@ -1,0 +1,12 @@
+
+# ***************************************** To draw an histogram and boxplot at once ***********************************************************************************************
+Peso=c(74,70,68,79,70,68,42,50,70,75,70,82,60,56,49,52.8,74,49,105,72,57,83,50,60,59,82,78,70,90,58,80,56,90)
+#---- Histograma
+hist(Peso,probability=TRUE,ylab="",col="#FF69B4", axes=TRUE, main="",ylim=c(0,.040),label=TRUE,breaks="Sturges")
+#--- Densidad
+lines(density(Peso),col="red",lwd=2)
+#--- Boxplot
+par(new=TRUE)
+boxplot(Peso,horizontal=TRUE, axes=FALSE, lwd=1, col=rgb(.5, .6,.5, alpha=0.15),
+        main="Peso de los alumnos del Curso de R")
+# **********************************************************************************************************************************************************************************
