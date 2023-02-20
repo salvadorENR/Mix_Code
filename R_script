@@ -9,7 +9,10 @@ lines(density(Peso),col="red",lwd=2)
 par(new=TRUE)
 boxplot(Peso,horizontal=TRUE, axes=FALSE, lwd=1, col=rgb(.5, .6,.5, alpha=0.15),
         main="Peso de los alumnos del Curso de R")
-# **********************************************************************************************************************************************************************************
-#To draw a multiple histogram
+# *************************************************************** To draw a multiple histogram ***********************************************************************************
  data <- data.frame(values = c(HMG_SCORE,SAR_SCORE,STUDENTSCORE,TEACHERSCORE),group = c(rep("HMG SCORE", 140),rep("SAR SCORE", 140),rep("STUDENT SCORE", 140),rep("TEACHER SCORE",140)))
-  ggplot(data, aes(x = values, fill = group))+geom_histogram(breaks=c(0,1,2,3,4,5,6,7,8,9,10),position = "identity", alpha = 1,colour="Black")+ scale_fill_manual(values = c("#62FE96","#FE206B","#62278E","#0000FF"))
+ ggplot(data, aes(x = values, fill = group))+geom_histogram(breaks=c(0,1,2,3,4,5,6,7,8,9,10),position = "identity", alpha = 1,colour="Black")+ scale_fill_manual(values = c("#62FE96","#FE206B","#62278E","#0000FF"))
+#******************************************************************** Correlation Matrix ***********************************************************************************************************************************************
+#Before of this the data base has to be attached(to put directly the variables' name)
+  x=data.frame("VAR1NAME","VAR2NAME",VAR3NAME,VAR4NAME)
+  cor(x, method = c("pearson", "kendall", "spearman"))
