@@ -16,3 +16,10 @@ boxplot(Peso,horizontal=TRUE, axes=FALSE, lwd=1, col=rgb(.5, .6,.5, alpha=0.15),
 #Before of this the data base has to be attached(to put directly the variables' name)
   x=data.frame("VAR1NAME","VAR2NAME",VAR3NAME,VAR4NAME)
   cor(x, method = c("pearson", "kendall", "spearman"))
+#******************************************************************** CorrelationMatrix (p-value)********************************************************************************************************************************************************
+install.packages("Hmisc")
+library("Hmisc")
+
+#Correlation matrix with significance levels (p-value)
+res2 <- rcorr(cbind("VAR1NAME","VAR2NAME",VAR3NAME,VAR4NAME), type = c("pearson","spearman"))
+res2
