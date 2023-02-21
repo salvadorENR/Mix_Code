@@ -23,3 +23,15 @@ library("Hmisc")
 #Correlation matrix with significance levels (p-value)
 res2 <- rcorr(cbind("VAR1NAME","VAR2NAME",VAR3NAME,VAR4NAME), type = c("pearson","spearman"))
 res2
+#******************************************************************* Addition for all columns **************************************************************************************************************************************************************************
+SumF=function(Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q15,Q16,Q17,Q18,Q19,Q20,Q21,Q22,Q23,Q24,Q25,Q26){
+  totals<-numeric()
+  for (i in 1:length(Q1)){ 
+    totals[i]=Q1[i]+Q2[i]+Q3[i]+Q4[i]+Q5[i]+Q6[i]+Q7[i]+Q8[i]+Q9[i]+Q10[i]+Q11[i]+Q12[i]+Q13[i]+Q14[i]+Q15[i]+Q16[i]+Q17[i]+Q18[i]+Q19[i]+Q20[i]+Q21[i]+Q22[i]+Q23[i]+Q24[i]+Q25[i]+Q26
+  }
+  totals
+}
+totals=SumF(Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q15,Q16,Q17,Q18,Q19,Q20,Q21,Q22,Q23,Q24,Q25,Q26)
+*********************************************************************** #Adding one column more to the data frame ********************************************************************************************************************************************************
+x$totals <- totals
+x
