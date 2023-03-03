@@ -32,6 +32,19 @@ SumF=function(Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q15,Q16,Q17,Q18,Q19
   totals
 }
 totals=SumF(Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8,Q9,Q10,Q11,Q12,Q13,Q14,Q15,Q16,Q17,Q18,Q19,Q20,Q21,Q22,Q23,Q24,Q25,Q26)
-*********************************************************************** #Adding one column more to the data frame ********************************************************************************************************************************************************
+#*********************************************************************** Adding one column more to the data frame ********************************************************************************************************************************************************
 x$totals <- totals
 x
+#********************************************************************** Frequency polygon ************************************************************************************************
+ data <- data.frame(values = c(HMG_SCORE,SAR_SCORE,STUDENTSCORE,TEACHERSCORE),group = c(rep("HMG SCORE", 140),rep("SAR SCORE", 140),rep("STUDENT SCORE", 140),rep("TEACHER SCORE",140)))
+ ggplot(data, aes(x = values, fill = group))+geom_histogram(breaks=c(0,1,2,3,4,5,6,7,8,9,10),position = "identity", alpha = 1,colour="Black")+ scale_fill_manual(values = c("#62FE96","#FE206B","#62278E","#0000FF"))
+
+
+ggplot(mpg, aes(x=cty, colour=drv, fill=drv)) + geom_freqpoly(binwidth=1)
+
+
+
+
+
+
+
